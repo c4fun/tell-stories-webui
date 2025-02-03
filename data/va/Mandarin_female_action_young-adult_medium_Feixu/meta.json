@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_female_action_young-adult_medium_Feixu",
+  "prompt_text": "\u4ece\u5e9f\u589f\u4e2d\u9192\u6765\uff0c\u6211\u5c31\u4ec0\u4e48\u90fd\u4e0d\u8bb0\u5f97\u4e86\u3002",
+  "prompt_wav": "data/va/Mandarin_female_action_young-adult_medium_Feixu/\u4ece\u5e9f\u589f\u4e2d\u9192\u6765\uff0c\u6211\u5c31\u4ec0\u4e48\u90fd\u4e0d\u8bb0\u5f97\u4e86\u3002.wav",
+  "language": "Mandarin",
+  "gender": "Female",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

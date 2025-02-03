@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_young-adult_high_Asmongold",
+  "prompt_text": "This is called Phantom Blade Zero.",
+  "prompt_wav": "data/va/English_male_action_young-adult_high_Asmongold/This is called Phantom Blade Zero..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "High"
+}

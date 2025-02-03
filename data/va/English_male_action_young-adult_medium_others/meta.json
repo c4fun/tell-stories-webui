@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_young-adult_medium_others",
+  "prompt_text": "My biggest weaknesses is asking for help when I need it.",
+  "prompt_wav": "data/va/English_male_action_young-adult_medium_others/My biggest weaknesses is asking for help when I need it..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

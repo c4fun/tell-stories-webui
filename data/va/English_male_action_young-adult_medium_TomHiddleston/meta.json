@@ -1,0 +1,11 @@
+{
+  "va_name": "English_male_action_young-adult_medium_TomHiddleston",
+  "prompt_text": "It's impossible to know the exact value, but pie is approximately",
+  "prompt_wav": "data/va/English_male_action_young-adult_medium_TomHiddleston/It's impossible to know the exact value, but pie is approximately.wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium",
+  "accent": "British"
+}

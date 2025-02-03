@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_male_action_young-adult_medium_yige",
+  "prompt_text": "大家好，我是衣哥",
+  "prompt_wav": "data/va/Mandarin_male_action_young-adult_medium_yige/大家好，我是衣哥.mp3",
+  "language": "Mandarin",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

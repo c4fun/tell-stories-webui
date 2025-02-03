@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_middle-aged_low_others",
+  "prompt_text": "You've done your own work. One day, you'll be tough enough.",
+  "prompt_wav": "data/va/English_male_action_middle-aged_low_others/You've done your own work. One day, you'll be tough enough..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Middle-Aged",
+  "voice_pitch": "Low"
+}

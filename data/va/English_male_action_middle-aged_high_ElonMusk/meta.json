@@ -1,0 +1,11 @@
+{
+  "va_name": "English_male_action_middle-aged_high_ElonMusk",
+  "prompt_text": "And we've got to live within our means.",
+  "prompt_wav": "data/va/English_male_action_middle-aged_high_ElonMusk/And we've got to live within our means..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Middle-Aged",
+  "voice_pitch": "High",
+  "famous": "yes"
+}

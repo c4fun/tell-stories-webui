@@ -1,0 +1,10 @@
+{
+  "va_name": "English_female_narration_young-adult_low_dont-know",
+  "prompt_text": "I like for you to be still, it is as though you were absent.",
+  "prompt_wav": "data/va/English_female_narration_young-adult_low_dont-know/I like for you to be still, it is as though you were absent..wav",
+  "language": "English",
+  "gender": "Female",
+  "voice_type": "Narration",
+  "age": "Young Adult",
+  "voice_pitch": "Low"
+}

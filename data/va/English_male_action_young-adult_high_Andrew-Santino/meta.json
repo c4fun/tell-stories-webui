@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_young-adult_high_Andrew-Santino",
+  "prompt_text": "I went to elementary school, middle school, high school, and then I went to an Ivy League college.",
+  "prompt_wav": "data/va/English_male_action_young-adult_high_Andrew-Santino/I went to elementary school, middle school, high school, and then I went to an Ivy League college..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "High"
+}

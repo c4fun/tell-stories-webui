@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_female_action_teen_high_Qiaoshiyu-sanshengsanshi-baifengjiu",
+  "prompt_text": "\u6b20\u522b\u4eba\u7684\u5c31\u4e00\u5b9a\u8981\u8fd8\uff0c\u5982\u679c\u4e0d\u5728\u8fd9\u513f\u8fd8\u3002",
+  "prompt_wav": "data/va/Mandarin_female_action_teen_high_Qiaoshiyu-sanshengsanshi-baifengjiu/\u6b20\u522b\u4eba\u7684\u5c31\u4e00\u5b9a\u8981\u8fd8\uff0c\u5982\u679c\u4e0d\u5728\u8fd9\u513f\u8fd8\u3002.wav",
+  "language": "Mandarin",
+  "gender": "Female",
+  "voice_type": "Action",
+  "age": "Teen",
+  "voice_pitch": "High"
+}

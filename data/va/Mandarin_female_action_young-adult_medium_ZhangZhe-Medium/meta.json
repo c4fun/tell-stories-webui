@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_female_action_young-adult_medium_ZhangZhe-Medium",
+  "prompt_text": "\u8001\u7237\uff0c\u8001\u7237\uff0c\u4f60\u4e3a\u4ec0\u4e48\u8981\u8fd9\u4e48\u505a\uff1f",
+  "prompt_wav": "data/va/Mandarin_female_action_young-adult_medium_ZhangZhe-Medium/\u8001\u7237\uff0c\u8001\u7237\uff0c\u4f60\u4e3a\u4ec0\u4e48\u8981\u8fd9\u4e48\u505a\uff1f.wav",
+  "language": "Mandarin",
+  "gender": "Female",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

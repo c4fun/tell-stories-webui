@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_young-adult_medium_SamAltman",
+  "prompt_text": "We wouldn't be able to do this without you, Mr. President.",
+  "prompt_wav": "data/va/English_male_action_young-adult_medium_SamAltman/We wouldn't be able to do this without you, Mr. President..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

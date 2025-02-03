@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_male_action_middle-aged_medium_zhangsongwen",
+  "prompt_text": "我朝火车站方向走去，那是民工的海洋。",
+  "prompt_wav": "data/va/Mandarin_male_action_middle-aged_medium_zhangsongwen/我朝火车站方向走去，那是民工的海洋。.wav",
+  "language": "Mandarin",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Middle-Aged",
+  "voice_pitch": "Medium"
+}

@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_female_narration_young-adult_medium_quanquan",
+  "prompt_text": "临行前，白花蛇精告诫广谋，绝不可落于人后，尤其是广智。",
+  "prompt_wav": "data/va/Mandarin_female_narration_young-adult_medium_quanquan/临行前，白花蛇精告诫广谋，绝不可落于人后，尤其是广智。.wav",
+  "language": "Mandarin",
+  "gender": "Female",
+  "voice_type": "Narration",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

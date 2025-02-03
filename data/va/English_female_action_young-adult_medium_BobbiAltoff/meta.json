@@ -1,0 +1,11 @@
+{
+  "va_name": "English_female_action_young-adult_medium_BobbiAltoff",
+  "prompt_text": "Would you consider me a friend of yours now, after this?",
+  "prompt_wav": "data/va/English_female_action_young-adult_medium_BobbiAltoff/Would you consider me a friend of yours now, after this?.wav",
+  "language": "English",
+  "gender": "Female",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Medium",
+  "accent": "British"
+}

@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_young-adult_high_100words",
+  "prompt_text": "supernova stardust, silence sound, city pollution,",
+  "prompt_wav": "data/va/English_male_action_young-adult_high_100words/supernova stardust, silence sound, city pollution,.wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "High"
+}

@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_narration_middle-aged_low_Obama",
+  "prompt_text": "We've disrupted terrorist attacks and strenghtened our homeland defense.",
+  "prompt_wav": "data/va/English_male_narration_middle-aged_low_Obama/We've disrupted terrorist attacks and strenghtened our homeland defense..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Narration",
+  "age": "Middle-Aged",
+  "voice_pitch": "Low"
+}

@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_middle-aged_high_JoshBrolin",
+  "prompt_text": "I landed the other day in a private plane.",
+  "prompt_wav": "data/va/English_male_action_middle-aged_high_JoshBrolin/I landed the other day in a private plane..wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Middle-Aged",
+  "voice_pitch": "High"
+}

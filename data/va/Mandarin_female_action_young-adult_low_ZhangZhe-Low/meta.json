@@ -1,0 +1,10 @@
+{
+  "va_name": "Mandarin_female_action_young-adult_low_ZhangZhe-Low",
+  "prompt_text": "\u4e0e\u541b\u76f8\u62e5\uff0c\u5730\u4e45\u5929\u957f\u3002",
+  "prompt_wav": "data/va/Mandarin_female_action_young-adult_low_ZhangZhe-Low/\u4e0e\u541b\u76f8\u62e5\uff0c\u5730\u4e45\u5929\u957f\u3002.wav",
+  "language": "Mandarin",
+  "gender": "Female",
+  "voice_type": "Action",
+  "age": "Young Adult",
+  "voice_pitch": "Low"
+}

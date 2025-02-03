@@ -1,0 +1,10 @@
+{
+  "va_name": "English_female_narration_young-adult_medium_Alissa",
+  "prompt_text": "And then I waited for response",
+  "prompt_wav": "data/va/English_female_narration_young-adult_medium_Alissa/And then I waited for response.wav",
+  "language": "English",
+  "gender": "Female",
+  "voice_type": "Narration",
+  "age": "Young Adult",
+  "voice_pitch": "Medium"
+}

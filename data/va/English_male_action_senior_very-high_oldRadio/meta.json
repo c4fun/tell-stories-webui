@@ -1,0 +1,10 @@
+{
+  "va_name": "English_male_action_senior_very-high_oldRadio",
+  "prompt_text": "And now...Coming to you, from the classist radio station on the air",
+  "prompt_wav": "data/va/English_male_action_senior_very-high_oldRadio/And now...Coming to you, from the classist radio station on the air.wav",
+  "language": "English",
+  "gender": "Male",
+  "voice_type": "Action",
+  "age": "Senior",
+  "voice_pitch": "Very High"
+}
