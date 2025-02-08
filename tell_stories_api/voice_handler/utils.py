@@ -100,7 +100,7 @@ def load_va_database() -> List[Dict]:
                     continue
                     
                 try:
-                    with open(meta_path, 'r') as f:
+                    with open(meta_path, 'r', encoding='utf-8') as f:
                         va_info = json.load(f)
                         # Add source path to help with debugging/tracking
                         # va_info['source_path'] = str(va_dir)
