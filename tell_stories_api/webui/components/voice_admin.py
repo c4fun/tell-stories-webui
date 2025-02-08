@@ -79,8 +79,8 @@ def create_voice_admin(api_base_url):
                 "voice_pitch": voice_pitch
             }
             
-            with open(va_dir / "meta.json", 'w') as f:
-                json.dump(meta_data, f, indent=2)
+            with open(va_dir / "meta.json", 'w', encoding='utf-8') as f:
+                json.dump(meta_data, f, indent=2, ensure_ascii=False)
             
             return f"Successfully created voice actor: {va_name}"
             
@@ -100,7 +100,7 @@ def create_voice_admin(api_base_url):
                 if not meta_path.exists():
                     continue
                     
-                with open(meta_path, 'r') as f:
+                with open(meta_path, 'r', encoding='utf-8') as f:
                     va_info = json.load(f)
                 voices.append(va_info)
             
