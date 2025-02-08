@@ -27,7 +27,7 @@ def read_plot_file(project_id: str) -> Dict[str, Any]:
     plot_path = get_process_dir(project_id) / "plot.json"
     if not plot_path.exists():
         raise FileNotFoundError(f"Plot file not found for project {project_id}")
-    with open(plot_path, 'r') as f:
+    with open(plot_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def read_cast_file(project_id: str) -> Dict[str, Any]:
@@ -35,7 +35,7 @@ def read_cast_file(project_id: str) -> Dict[str, Any]:
     cast_path = get_process_dir(project_id) / "cast.json"
     if not cast_path.exists():
         raise FileNotFoundError(f"Cast file not found for project {project_id}")
-    with open(cast_path, 'r') as f:
+    with open(cast_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def ensure_book_folder(book_id: str) -> None:

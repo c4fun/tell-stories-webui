@@ -1,7 +1,7 @@
 {
   "va_name": "Mandarin_female_action_young-adult_high_LinZhiling",
-  "prompt_text": "\u516d\u767e\u7c73\u5904\u6709\u9650\u901f\u62cd\u7167\u3002",
-  "prompt_wav": "data/va/Mandarin_female_action_young-adult_high_LinZhiling/\u516d\u767e\u7c73\u5904\u6709\u9650\u901f\u62cd\u7167\u3002.wav",
+  "prompt_text": "六百米处有限速拍照。",
+  "prompt_wav": "data/va/Mandarin_female_action_young-adult_high_LinZhiling/六百米处有限速拍照。.wav",
   "language": "Mandarin",
   "gender": "Female",
   "voice_type": "Action",

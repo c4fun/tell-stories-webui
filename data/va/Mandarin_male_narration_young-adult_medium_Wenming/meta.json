@@ -1,7 +1,7 @@
 {
   "va_name": "Mandarin_male_narration_young-adult_medium_Wenming",
-  "prompt_text": "\u6bcf\u4e2a\u6587\u660e\u90fd\u662f\u5e26\u67aa\u7684\u730e\u4eba\uff0c\u50cf\u5e7d\u7075\u822c\u6f5c\u884c\u4e8e\u6797\u95f4\u3002",
-  "prompt_wav": "data/va/Mandarin_male_narration_young-adult_medium_Wenming/\u6bcf\u4e2a\u6587\u660e\u90fd\u662f\u5e26\u67aa\u7684\u730e\u4eba\uff0c\u50cf\u5e7d\u7075\u822c\u6f5c\u884c\u4e8e\u6797\u95f4\u3002.wav",
+  "prompt_text": "每个文明都是带枪的猎人，像幽灵般潜行于林间。",
+  "prompt_wav": "data/va/Mandarin_male_narration_young-adult_medium_Wenming/每个文明都是带枪的猎人，像幽灵般潜行于林间。.wav",
   "language": "Mandarin",
   "gender": "Male",
   "voice_type": "Action",

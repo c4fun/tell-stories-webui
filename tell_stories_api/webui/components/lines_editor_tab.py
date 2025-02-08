@@ -12,7 +12,7 @@ def create_lines_editor_tab(process_id):
                 logger.error(f"Lines file not found: {file_path}")
                 return None, {"error": "Lines file not found"}
             
-            with open(file_path, 'r') as f:
+            with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 lines = data.get("lines", [])
             
