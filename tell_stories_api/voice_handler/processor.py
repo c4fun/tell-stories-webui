@@ -12,7 +12,7 @@ from tqdm import tqdm
 
 class VoiceProcessor:
     def process_cast_file(self, process_dir: Path) -> dict:
-        with open(process_dir / "cast.json") as f:
+        with open(process_dir / "cast.json", encoding='utf-8') as f:
             va_match = json.load(f)
         
         cast_dict = {c["character"]: c for c in va_match}
@@ -57,15 +57,16 @@ class VoiceProcessor:
             if not cast_file.exists():
                 raise Exception("Voice casting not performed. Please run voice_casting first.")
                 
-            with open(cast_file) as f:
+            with open(cast_file, encoding='utf-8') as f:
                 cast_dict = json.load(f)
                 
-            with open(process_dir / "lines.json") as f:
+            with open(process_dir / "lines.json", encoding='utf-8') as f:
                 lines_data = json.load(f)
             progress_data.total_lines = len(lines_data["lines"])
             
+
             # Save initial progress
-            with open(progress_file, 'w') as f:
+            with open(progress_file, 'w', encoding='utf-8') as f:
                 json.dump(progress_data.model_dump(), f)
 
             # Setup output directory
@@ -93,7 +94,7 @@ class VoiceProcessor:
             logger.error(f"Error in voice generation: {str(e)}")
         
         # Save final progress
-        with open(progress_file, 'w') as f:
+        with open(progress_file, 'w', encoding='utf-8') as f:
             json.dump(progress_data.model_dump(), f)
 
     def _generate_audio_files(self, request: VoiceRequest, lines_data: dict, cast_dict: dict, 
@@ -189,7 +190,7 @@ class VoiceProcessor:
         
         # Update progress
         progress_data.processed_lines += 1
-        with open(progress_file, 'w') as f:
+        with open(progress_file, 'w', encoding='utf-8') as f:
             json.dump(progress_data.model_dump(), f)
             
         return current_time
@@ -251,7 +252,8 @@ class VoiceProcessor:
         
         # Update progress
         progress_data.processed_lines += 1
-        with open(progress_file, 'w') as f:
+        with open(progress_file, 'w', encoding='utf-8') as f:
+
             json.dump(progress_data.model_dump(), f)
             
         return current_time
@@ -265,7 +267,7 @@ class VoiceProcessor:
     ):
         """Create final output files including audio and subtitles"""
         # Create file list for ffmpeg
-        with open(output_dir / "files.txt", "w") as f:
+        with open(output_dir / "files.txt", "w", encoding='utf-8') as f:
             for file_path in file_list:
                 if file_path.exists():  # Only include successfully generated files
                     f.write(f"file '{file_path.name}'\n")

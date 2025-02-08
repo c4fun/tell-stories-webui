@@ -30,8 +30,8 @@ class VoiceService:
         
         cast_dict = self.processor.process_cast_file(process_dir)
         
-        with open(cast_output, 'w') as f:
-            json.dump(cast_dict, f, indent=2)
+        with open(cast_output, 'w', encoding='utf-8') as f:
+            json.dump(cast_dict, f, indent=2, ensure_ascii=False)
         
         return VoiceCastResponse(
             status="completed",

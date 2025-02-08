@@ -100,7 +100,7 @@ def create_voice_tab(api_base_url, process_id):
         cast_path = Path(f"data/process/{process_id}/cast.json")
         try:
             if cast_path.exists():
-                with open(cast_path, 'r') as f:
+                with open(cast_path, 'r', encoding='utf-8') as f:
                     cast_data = json.load(f)
                     logger.info(f'Loaded cast data: {cast_data}')
                     # Convert to table format for display
@@ -121,8 +121,8 @@ def create_voice_tab(api_base_url, process_id):
                 
             cast_path = Path(f"data/process/{process_id}/cast.json")
             cast_path.parent.mkdir(parents=True, exist_ok=True)
-            with open(cast_path, 'w') as f:
-                json.dump(cast_data, f, indent=4)
+            with open(cast_path, 'w', encoding='utf-8') as f:
+                json.dump(cast_data, f, indent=4, ensure_ascii=False)
             logger.info(f"Successfully saved cast file to {cast_path}")
             return {"status": "success", "message": f"Cast saved to {cast_path}"}
         except Exception as e:
