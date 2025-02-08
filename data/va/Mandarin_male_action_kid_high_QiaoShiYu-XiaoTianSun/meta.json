@@ -1,7 +1,7 @@
 {
   "va_name": "Mandarin_male_action_kid_high_QiaoShiYu-XiaoTianSun",
-  "prompt_text": "\u6211\u51fa\u751f\u5728\u4e09\u767e\u5e74\u524d\uff0c\u4e5d\u91cd\u5929\u4e0a\u7684\u4eba\u90fd\u53eb\u6211\u5c0f\u5929\u5b59\u3002",
-  "prompt_wav": "data/va/Mandarin_male_action_kid_high_QiaoShiYu-XiaoTianSun/\u6211\u51fa\u751f\u5728\u4e09\u767e\u5e74\u524d\uff0c\u4e5d\u91cd\u5929\u4e0a\u7684\u4eba\u90fd\u53eb\u6211\u5c0f\u5929\u5b59\u3002.wav",
+  "prompt_text": "我出生在三百年前，九重天上的人都叫我小天孙。",
+  "prompt_wav": "data/va/Mandarin_male_action_kid_high_QiaoShiYu-XiaoTianSun/我出生在三百年前，九重天上的人都叫我小天孙。.wav",
   "language": "Mandarin",
   "gender": "Male",
   "voice_type": "Action",
