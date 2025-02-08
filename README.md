@@ -116,10 +116,18 @@ mkdir -p pretrained_models
 git clone https://www.modelscope.cn/iic/CosyVoice2-0.5B.git pretrained_models/CosyVoice2-0.5B
 ```
 
-#### 4. Install ttsfrd package for better text normalization performance.
+#### 4. Install ttsfrd package for better text normalization performance. (Not Applicable for Windows)
 
 Notice that this step is not necessary. If you do not install ttsfrd package, we will use WeTextProcessing by default.
 
+First, download the ttsfrd package.
+```bash
+# download through SDK
+from modelscope import snapshot_download
+snapshot_download('iic/CosyVoice-ttsfrd', local_dir='pretrained_models/CosyVoice-ttsfrd')
+```
+
+Then, install the dependencies.
 ```bash
 cd pretrained_models/CosyVoice-ttsfrd/
 unzip resource.zip -d .
