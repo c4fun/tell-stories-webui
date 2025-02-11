@@ -5,6 +5,7 @@ from typing import List, Dict
 from tell_stories_api.logs import logger
 from tell_stories_api.provider.deepseek_api import DeepSeekAPI
 from tell_stories_api.provider.qwen_api import QwenAPI
+from tell_stories_api.provider.openrouter_api import OpenRouterAPI
 from tell_stories_api.script_handler.prompt import (
     get_va_match_prompt,
     get_va_and_main_plot_prompt,
@@ -13,8 +14,10 @@ from tell_stories_api.script_handler.prompt import (
 )
 from tqdm import tqdm
 
+# Initialize all providers
 deepseek = DeepSeekAPI()
 qwen = QwenAPI(model="qwen-max")
+openrouter = OpenRouterAPI()
 
 # Add this constant at the top of the file
 COMMONLY_CAPITALIZED_WORDS = {
@@ -27,22 +30,55 @@ COMMONLY_CAPITALIZED_WORDS = {
     "MH", "MHH", "MHHH", "MHHHH", "MHHHHH"  # Moaning
 }
 
-def predict_without_fallback(prompt: str) -> tuple[str, int, str]:
-    # Get the model selection from environment variable
-    use_qwen = os.getenv("USE_QWEN_MODEL", "false").lower() == "true"
+# Add model priority configuration
+MODEL_CONFIG = {
+    "primary": os.getenv("PRIMARY_MODEL", "deepseek").lower(),
+    "fallback_order": os.getenv("MODEL_FALLBACK_ORDER", "deepseek,openrouter,qwen").lower().split(",")
+}
+
+def predict_with_fallback(prompt: str) -> tuple[str, int, str]:
+    """
+    Predict using the primary model with fallback logic
+    """
+    # Get initial model choice
+    model_choice = MODEL_CONFIG["primary"]
+    logger.info(f"Selected model: {model_choice}")
     
-    if use_qwen:
-        logger.info("Using Qwen model for prediction")
-        response, total_tokens, finish_reason = qwen.predict(prompt)
-    else:
-        logger.info("Using DeepSeek model for prediction")
-        response, total_tokens, finish_reason = deepseek.predict_v3(prompt)
-    
-    return response, total_tokens, finish_reason
+    # Try primary model first
+    try:
+        if model_choice == "qwen":
+            return qwen.predict(prompt)
+        elif model_choice == "openrouter":
+            return openrouter.predict_v3(prompt)
+        else:  # deepseek is default
+            return deepseek.predict_v3(prompt)
+            
+    except Exception as e:
+        logger.error(f"Error with {model_choice}: {str(e)}")
+        
+        # Try fallback models in order
+        for fallback_model in MODEL_CONFIG["fallback_order"]:
+            if fallback_model == model_choice:
+                continue
+                
+            try:
+                logger.info(f"Trying fallback model: {fallback_model}")
+                if fallback_model == "qwen":
+                    return qwen.predict(prompt)
+                elif fallback_model == "openrouter":
+                    return openrouter.predict_v3(prompt)
+                else:  # deepseek
+                    return deepseek.predict_v3(prompt)
+            except Exception as fallback_e:
+                logger.error(f"Error with fallback {fallback_model}: {str(fallback_e)}")
+                continue
+                
+        # If all models fail, raise the original error
+        raise e
 
 async def generate_va_and_main_plot(story: str, book_id: str = ""):
     prompt = await get_va_and_main_plot_prompt(story, book_id)
-    response, total_tokens, finish_reason = predict_without_fallback(prompt)
+    response, total_tokens, finish_reason = predict_with_fallback(prompt)
     logger.info(f"response.content: {response.content}")
     logger.info(f"prompt: {prompt}")
     logger.info(f"total_tokens: {total_tokens}")
@@ -51,7 +87,7 @@ async def generate_va_and_main_plot(story: str, book_id: str = ""):
 
 async def generate_va_match_from_script(characters: str, book_id: str = ""):
     prompt = await get_va_match_prompt(characters, book_id)
-    response, total_tokens, finish_reason = predict_without_fallback(prompt)
+    response, total_tokens, finish_reason = predict_with_fallback(prompt)
     logger.info(f"response.content: {response.content}")
     logger.info(f"prompt: {prompt}")
     logger.info(f"total_tokens: {total_tokens}")
@@ -60,7 +96,7 @@ async def generate_va_match_from_script(characters: str, book_id: str = ""):
 
 def generate_character_lines_from_script(story, json_plot):
     prompt = get_character_lines_prompt_with_attr(json_plot, story)
-    response, total_tokens, finish_reason = predict_without_fallback(prompt)
+    response, total_tokens, finish_reason = predict_with_fallback(prompt)
     logger.info(f"response.content: {response.content}")
     logger.info(f"prompt: {prompt}")
     logger.info(f"total_tokens: {total_tokens}")
@@ -232,7 +268,7 @@ def split_story_into_parts(story: str, main_plot: str, target_length: int = 60) 
                 
                 # Ask LLM for split decision
                 prompt = get_split_decision_prompt(context_text, main_plot)
-                response, _, _ = predict_without_fallback(prompt)
+                response, _, _ = predict_with_fallback(prompt)
                 logger.info(f"response.content: {response.content}")
                 # Parse LLM response
                 split_line = None
