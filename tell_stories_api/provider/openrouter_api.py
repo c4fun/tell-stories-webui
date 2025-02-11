@@ -95,6 +95,7 @@ class OpenRouterAPI:
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=formatted_history,
+                    max_tokens=8192,
                     stream=False
                 )
                 logger.info(f"response: {response}")
