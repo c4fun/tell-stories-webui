@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from typing import Dict
+from typing import Dict, List
 from tell_stories_api.logs import logger
 from tqdm import tqdm
 from .processor import (
@@ -106,6 +106,7 @@ class ScriptService:
         try:
             process_dir = Path("data/process") / process_id
             progress_path = process_dir / "script_progress.json"
+            story_parts_path = process_dir / "story_parts.json"
             
             # Update progress - splitting story
             with open(progress_path, "w", encoding='utf-8') as f:
@@ -117,11 +118,20 @@ class ScriptService:
             # Load required data
             with open(process_dir / "plot.json", encoding='utf-8') as f:
                 json_plot = json.load(f)
-            with open(process_dir / "story.txt", encoding='utf-8') as f:
-                story = f.read()
             
-            # Split story and process parts
-            story_parts = split_story_into_parts(story, json_plot["plot"]["main_plot"])
+            story_parts: List[str] = []  # Initialize as empty list instead of dict
+            # Check if story parts already exist
+            if story_parts_path.exists():
+                with open(story_parts_path, encoding='utf-8') as f:
+                    story_parts = json.load(f)["parts"]
+            else:
+                # Load story and split into parts
+                with open(process_dir / "story.txt", encoding='utf-8') as f:
+                    story = f.read()
+                story_parts = split_story_into_parts(story, json_plot["plot"]["main_plot"])
+                # Cache story parts
+                with open(story_parts_path, "w", encoding='utf-8') as f:
+                    json.dump({"parts": story_parts}, f, indent=4, ensure_ascii=False)
             
             # Update progress - processing lines
             with open(progress_path, "w", encoding='utf-8') as f:
