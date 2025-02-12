@@ -99,6 +99,7 @@ class DeepSeekAPI:
                 response = self.client.chat.completions.create(
                     model='deepseek-chat',
                     messages=history_zhipuai_format,
+                    max_tokens=8192,
                     stream=False
                 )
                 logger.info(f"response: {response}")

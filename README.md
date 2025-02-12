@@ -56,6 +56,32 @@ cp .env.example .env
 1. Fill in your Deepseek API token in the `.env` file.
 2. Fill in your CosyVoice 2 service port in the `.env` file. 
 
+Example `.env` file:
+```bash
+
+# Model Selection and Fallback Configuration
+PRIMARY_MODEL="openrouter"  # Options: deepseek, qwen, openrouter
+# Comma-separated order of fallback. If primary model is not available, the fallback models will be tried in the order.
+MODEL_FALLBACK_ORDER="openrouter,deepseek,qwen"
+
+# Model configuration
+DEEPSEEK_BASE_URL=https://api.deepseek.com
+DEEPSEEK_API_KEY="your_deepseek_api_key"
+# Option: Use OpenRouterAI
+OPENROUTER_BASE_URL="https://openrouter.ai/api/v1"
+OPENROUTER_API_KEY="your_openrouter_api_key"
+# Option: Use Qwen model
+DASHSCOPE_BASE_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"
+DASHSCOPE_API_KEY="your_dashscope_api_key"
+
+# Voice Generate Service
+# CosyVoice 2 service; running locally
+COSYVOICE2_HOST="127.0.0.1"
+COSYVOICE2_PORT="50000"
+
+MAX_TOKENS_PER_SPLIT=4000
+```
+
 #### 3. Run the service:
 
 TellStories.AI WebUI runs on port 8000. If you want to change the port, please also change it in the `.env` file.
