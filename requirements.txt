@@ -7,6 +7,6 @@ numpy==2.2.1; sys_platform != "win32"
 numpy==1.26.4; sys_platform == "win32"
 requests==2.32.3
 soundfile==0.13.0
-gradio==5.13.0
+gradio==5.23.3
 httpx==0.27.2
 tiktoken==0.8.0
